@@ -4,22 +4,33 @@ import { Layout } from 'antd';
 
 export default function LayoutAdmin(props) {
 	const { routes } = props;
-	const { Header, Content } = Layout;
+	const { Header, Content, Sider } = Layout;
 
 	return (
 		<Fragment>
-			<Layout>
-					<Layout className="site-layout">
-						<Header className="breadcrumb-head site-layout-background bg-white" style={{ padding: 0 }}>
-							HEADER ADMIN
-						</Header>
-						<Content style={{ margin: '24px 16px 0' }}>
-							<div className="site-layout-background bg-white" style={{ padding: 24, minHeight: 360 }}>
-								<LoadRoutes routes={routes} />
-							</div>
-						</Content>
-					</Layout>
+			<Layout className="border">
+				<Sider
+					className="bg-primary"
+					style={{
+						overflow: 'auto',
+						height: '100vh',
+						position: 'fixed',
+						left: 0
+					}}
+				>
+					SIDER
+				</Sider>
+				<Layout className="border" style={{ marginLeft: 200 }}>
+					<Header className="border" style={{ padding: 0 }}>
+						HEADER ADMIN
+					</Header>
+					<Content style={{ margin: '24px 16px 0' }}>
+						<div className="border" style={{ padding: 24, minHeight: 360 }}>
+							<LoadRoutes routes={routes} />
+						</div>
+					</Content>
 				</Layout>
+			</Layout>
 		</Fragment>
 	);
 }

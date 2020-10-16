@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Layout } from 'antd';
+import Navegacion from '../Navegacion/navegacion';
 
 export default function LayoutUser(props) {
 	const { routes } = props;
@@ -10,7 +11,7 @@ export default function LayoutUser(props) {
 		<div className="body">
 			<Layout >
                 <Header>
-                    HEADER
+                    <Navegacion />
                 </Header>
                 <Content style={{ height: "auto" }} className="bg-layout">
                     <div className="site-layout-content flex">
