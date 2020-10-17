@@ -1,0 +1,46 @@
+.sider-admin{
+    overflow: auto;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    background: rgb(250, 250, 250)!important;
+}
+.menu-admin{
+    background: rgb(250, 250, 250)!important;
+}
+.ant-layout-sider-trigger{
+    background: rgb(250, 250, 250)!important;
+    color: black!important;
+    border-top: 1px rgb(219, 219, 219) solid;
+}
+.sider-admin .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    background: rgb(228, 228, 228)!important;
+    margin: 16px;
+}
+
+/* header admin */
+.session-admin-container{
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+}
+.session-admin{
+    font-size: 26px;
+    cursor: pointer;
+    color: rgba(201, 51, 51, 0.603)!important;
+    transition: .5s;
+}
+.session-admin:hover{
+    color: red!important;
+    transition: .5s;
+}
+.avatar-admin{
+    background-color: #87d068!important;
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+}

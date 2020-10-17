@@ -1,31 +1,24 @@
 import React, { Fragment } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Layout } from 'antd';
+import NavegacionAdmin from '../Navegacion_Admin/sider_admin';
+import HeaderAdmin from '../Navegacion_Admin/header_admin';
+import './layoutAdmin.scss'
 
 export default function LayoutAdmin(props) {
 	const { routes } = props;
-	const { Header, Content, Sider } = Layout;
+	const { Header, Content } = Layout;
 
 	return (
 		<Fragment>
-			<Layout className="border">
-				<Sider
-					className="bg-primary"
-					style={{
-						overflow: 'auto',
-						height: '100vh',
-						position: 'fixed',
-						left: 0
-					}}
-				>
-					SIDER
-				</Sider>
-				<Layout className="border" style={{ marginLeft: 200 }}>
-					<Header className="border" style={{ padding: 0 }}>
-						HEADER ADMIN
+			<Layout>
+				<NavegacionAdmin />
+				<Layout className="layout-admin">
+					<Header className="header-admin">
+						<HeaderAdmin />
 					</Header>
 					<Content style={{ margin: '24px 16px 0' }}>
-						<div className="border" style={{ padding: 24, minHeight: 360 }}>
+						<div className="contenido-admin shadow-sm" >
 							<LoadRoutes routes={routes} />
 						</div>
 					</Content>
