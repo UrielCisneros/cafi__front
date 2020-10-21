@@ -1,0 +1,73 @@
+/* .contenedor-admin-principal{
+    border: black solid;
+} */
+.animaciones-container{
+    /* border: rgb(255, 25, 25) solid; */
+    display: flex;
+    justify-content: center;
+}
+.contenedor-quienes, .contenedor-ubicacion {
+    max-width: 100%;
+    height: 300px;
+    box-shadow: 0px 0px 21px -8px rgba(194,194,194,1);
+    margin: 0 10px 30px;
+}
+.contenedor-tienda, .contenedor-clientes, .contenedor-redes{
+    max-width: 100%;
+    height: 150px;
+    /* box-shadow: 0px 0px 21px -8px rgba(194,194,194,1); */
+    margin: 0 10px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quienes-texto{
+    padding: 30px;
+    text-align: justify;
+    height: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.quienes-ver-mas{
+    background-color: #f5f5f5;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(0, 140, 255);
+    transition: .5s;
+}
+.quienes-ver-mas:hover{
+    font-size: 22px;
+    transition: .5s;
+}.ubicacion-geo{
+    height: 100%;
+}
+.icon-redes{
+    margin: 0 15px;
+    font-size: 65px;
+    transition: .3s;
+}
+.icon-redes:hover{
+    font-size: 75px;
+    transition: .3s;
+    color: rgb(0, 140, 255);
+}
+
+.anim-title{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 20px;
+}
+.contenedor-boton-registrar-admin{
+    display: flex;
+    justify-content: flex-end;
+}
+.icon-center{
+    border: blueviolet solid!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

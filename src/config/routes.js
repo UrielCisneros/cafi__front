@@ -15,6 +15,7 @@ import Home from '../pages/users/home/home'
 import Blog from '../pages/users/blog/blog'
 import Capacitaciones from '../pages/users/capacitaciones/capacitaciones'
 import Servicios from '../pages/users/servicios/servicios'
+import QuienesSomos from '../pages/users/quienes_somos/quienes_somos'
 
 //other
 import Error404 from '../pages/error404'
@@ -83,6 +84,11 @@ const routes = [
 			{
 				path: '/servicios',
 				component: Servicios,
+				exact: true
+			},
+			{
+				path: '/quienes_somos',
+				component: QuienesSomos,
 				exact: true
 			},
 			{
