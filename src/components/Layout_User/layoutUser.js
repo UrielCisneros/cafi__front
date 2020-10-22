@@ -2,11 +2,12 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Layout } from 'antd';
 import Navegacion from '../Navegacion/navegacion';
+import Footer from '../Footer/footer';
 import './layoutUser.scss'
 
 export default function LayoutUser(props) {
 	const { routes } = props;
-	const { Content, Footer, Header } = Layout;
+	const { Content, Header } = Layout;
 
 	return (
 		<div className="body">
@@ -19,9 +20,10 @@ export default function LayoutUser(props) {
                         <LoadRoutes routes={routes} />
                     </div>
                 </Content>
-                <Footer>
-                    FOOTER
-                </Footer>
+				
+                <Footer />
+					
+                
 			</Layout>
 		</div>
 	);
