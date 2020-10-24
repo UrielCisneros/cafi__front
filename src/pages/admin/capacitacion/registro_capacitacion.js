@@ -40,7 +40,7 @@ export default function RegistroCapacitacion() {
 				Nueva Capacitación
 			</Button>
 			<Drawer
-				title="Registrar un nueva empresa"
+				title="Registrar un nueva capacitación"
 				width={window.screen.width > 768 ? 720 : window.screen.width}
 				onClose={onClose}
 				visible={visible}
@@ -52,7 +52,7 @@ export default function RegistroCapacitacion() {
 						}}
 					>
 						<Button onClick={onClose} type="primary">
-							Listo
+							Guardar
 						</Button>
 					</div>
 				}
@@ -90,7 +90,7 @@ export default function RegistroCapacitacion() {
 						</Form.Item>
 						<Form.Item className="text-center">
 							<Button type="primary" htmlType="submit">
-								Register
+								Guardar
 							</Button>
 						</Form.Item>
 					</Form>

@@ -17,6 +17,9 @@ import Capacitaciones from '../pages/users/capacitaciones/capacitaciones'
 import Servicios from '../pages/users/servicios/servicios'
 import QuienesSomos from '../pages/users/quienes_somos/quienes_somos'
 
+//login
+import Login from '../pages/login/login';
+
 //other
 import Error404 from '../pages/error404'
 
@@ -89,6 +92,11 @@ const routes = [
 			{
 				path: '/quienes_somos',
 				component: QuienesSomos,
+				exact: true
+			},
+			{
+				path: '/login',
+				component: Login,
 				exact: true
 			},
 			{

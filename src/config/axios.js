@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const clienteAxios = axios.create({
-    baseURL : "https://tiendaab.herokuapp.com/api"
+    baseURL : "https://powerful-badlands-39362.herokuapp.com"
 })
 
 export default clienteAxios

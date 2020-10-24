@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Drawer, Form, Button, Input, Upload, Modal, Divider } from 'antd';
 import { EditOutlined, PlusOutlined } from '@ant-design/icons';
+import { Editor } from '@tinymce/tinymce-react';
 import './servicios.scss';
 
 function getBase64(file) {
@@ -51,7 +52,10 @@ export default function RegistroServicios() {
 		</div>
 	);
 
-	const onSearch = value => console.log(value);
+	const onSearch = (value) => console.log(value);
+	const handleEditorChange = (e) => {
+		console.log('Content was updated:', e.target.getContent());
+	};
 
 	return (
 		<div>
@@ -59,7 +63,7 @@ export default function RegistroServicios() {
 				Nuevo Servicio
 			</Button>
 			<Drawer
-				title="Registrar un nueva empresa"
+				title="Registrar un nuevo servicio"
 				width={window.screen.width > 768 ? 720 : window.screen.width}
 				onClose={onClose}
 				visible={visible}
@@ -71,7 +75,7 @@ export default function RegistroServicios() {
 						}}
 					>
 						<Button onClick={onClose} type="primary">
-							Listo
+							Guardar
 						</Button>
 					</div>
 				}
@@ -106,8 +110,22 @@ export default function RegistroServicios() {
 							name="contenido"
 							label="Contenido"
 							rules={[ { required: true, message: 'El contenido es obligarotio' } ]}
+							valuePropName="Editor"
 						>
-							<Input placeholder="Contenido del servicio" />
+							<Editor
+								init={{
+									height: 250,
+									menubar: true,
+									plugins: [
+										'advlist autolink lists link image charmap print preview anchor',
+										'searchreplace visualblocks code fullscreen',
+										'insertdatetime media table paste code help wordcount'
+									],
+									toolbar:
+										'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help'
+								}}
+								onEditorChange={handleEditorChange}
+							/>
 						</Form.Item>
 						<Form.Item
 							name="video"
@@ -117,17 +135,11 @@ export default function RegistroServicios() {
 							<Input placeholder="https://www.youtube.com/watch?v=tAGnKpE4NCI" />
 						</Form.Item>
 						<Divider orientation="left">Paquetes</Divider>
-						
-						<Form.Item
-							name="nombrePaquete"
-							label="Nombre del paquete"
-						>
+
+						<Form.Item name="nombrePaquete" label="Nombre del paquete">
 							<Input placeholder="paquete 1..." />
 						</Form.Item>
-						<Form.Item
-							name="beneficio"
-							label="Beneficios"
-						>
+						<Form.Item name="beneficio" label="Beneficios">
 							<Search placeholder="Beneficio 1..." onSearch={onSearch} /* style={{ width: 200 }} */ />
 						</Form.Item>
 						<Form.Item
@@ -139,7 +151,7 @@ export default function RegistroServicios() {
 						</Form.Item>
 						<Form.Item className="text-center">
 							<Button type="primary" htmlType="submit">
-								Register
+								Guardar
 							</Button>
 						</Form.Item>
 					</Form>

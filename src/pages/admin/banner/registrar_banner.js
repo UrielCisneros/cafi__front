@@ -79,7 +79,7 @@ export default function RegistroBanner() {
 						}}
 					>
 						<Button onClick={onClose} type="primary">
-							Listo
+							Guardar
 						</Button>
 					</div>
 				}
@@ -124,7 +124,7 @@ export default function RegistroBanner() {
 						<Input placeholder="Redireccion de la imagen (opcional)" />
 					</Form.Item>
 					<Form.Item {...buttonItemLayout}>
-						<Button type="primary">Submit</Button>
+						<Button type="primary">Guardar</Button>
 					</Form.Item>
 				</Form>
 			</Drawer>

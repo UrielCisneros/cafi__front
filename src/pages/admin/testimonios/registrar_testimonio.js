@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Drawer, Form, Button, Input, Upload, Modal } from 'antd';
+import { Drawer, Form, Button, Input, Upload, Modal, Divider } from 'antd';
 import { EditOutlined, PlusOutlined } from '@ant-design/icons';
+import './testimonios.scss'
 
 function getBase64(file) {
 	return new Promise((resolve, reject) => {
@@ -10,12 +11,8 @@ function getBase64(file) {
 		reader.onerror = (error) => reject(error);
 	});
 }
-const formItemLayout = {
-	labelCol: { span: 12 },
-	wrapperCol: { span: 32 }
-};
 
-export default function RegistroEmpresa() {
+export default function RegistroTestimonio() {
 	const [ form ] = Form.useForm();
 	const [ previewVisible, setPreviewVisible ] = useState(false);
 	const [ previewImage, setPreviewImage ] = useState('');
@@ -56,10 +53,10 @@ export default function RegistroEmpresa() {
 	return (
 		<div>
 			<Button size="large" type="primary" icon={<EditOutlined style={{ fontSize: 20 }} />} onClick={showDrawer}>
-				Nueva Empresa
+				Nuevo testimonio
 			</Button>
 			<Drawer
-				title="Registrar un nueva empresa"
+				title="Registrar nuevo testimonio"
 				width={window.screen.width > 768 ? 720 : window.screen.width}
 				onClose={onClose}
 				visible={visible}
@@ -76,41 +73,29 @@ export default function RegistroEmpresa() {
 					</div>
 				}
 			>
-				<div className="d-flex justify-content-center">
-					<div>
-						<Upload
-							action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-							listType="picture-card"
-							fileList={fileList}
-							onPreview={handlePreview}
-							onChange={handleChange}
-						>
-							{fileList.length >= 1 ? null : uploadButton}
-						</Upload>
-					</div>
-				</div>
 				<Modal visible={previewVisible} title={previewTitle} footer={null} onCancel={handleCancel}>
 					<img alt="example" style={{ width: '100%' }} src={previewImage} />
 				</Modal>
 				<div className="d-flex justify-content-center">
-					<Form {...formItemLayout} layout="vertical" hideRequiredMark form={form}>
-						<Form.Item
-							name="name"
-							label="Empresa"
-							rules={[ { required: true, message: 'El nombre de la empresa es obligarotio' } ]}
-						>
-							<Input placeholder="Nombre de la empresa" />
+					<Form layout="vertical" hideRequiredMark form={form} className="w-50">
+						<Form.Item name="foto" label="Foto" className="texto-testimonio-form-label">
+							<div className="d-flex justify-content-center">
+								<div>
+									<Upload
+										action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+										listType="picture-card"
+										fileList={fileList}
+										onPreview={handlePreview}
+										onChange={handleChange}
+									>
+										{fileList.length >= 1 ? null : uploadButton}
+									</Upload>
+								</div>
+							</div>
 						</Form.Item>
-						<Form.Item
-							name="url"
-							label="Link"
-							rules={[ { required: true, message: 'La URL de la pagina de la empresa es obligatoria' } ]}
-						>
-							<Input
-								style={{ width: '100%' }}
-								addonBefore="http://"
-								placeholder="Link a pagina de la empresa"
-							/>
+						<Divider className="divider-border"> O </Divider>
+						<Form.Item name="video" label="Video" className="texto-testimonio-form-label">
+							<Input style={{ width: '100%' }} placeholder="Link a video" />
 						</Form.Item>
 						<Form.Item className="text-center">
 							<Button type="primary" htmlType="submit">
