@@ -14,3 +14,19 @@
     transition: .3s;
     color: rgb(0, 140, 255);
 }
+#botones-enlaces{
+    font-size: 16px;
+    color: rgb(0, 85, 155);
+}
+
+#botones-enlaces:hover{
+    font-size: 18px;
+    transition: .3s;
+    color: blueviolet;
+}
+
+.informacion{
+    font-size: 20px;
+    text-align: center;
+    color: rgb(0, 140, 255);
+}
