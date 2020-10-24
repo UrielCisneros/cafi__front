@@ -1,0 +1,41 @@
+.seccion-1{
+    background:chartreuse ;
+}
+.contenedores{
+    background: white;
+}
+.boton-vender{
+    font-size: 55px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(247, 8, 8);
+    
+}
+
+.contenedor-reds, .contendor-boton {
+    max-width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.contenedor-cifras{
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+.redes{
+    font-size: 75px;
+    margin: 0 15px;
+}
+.redes:hover{
+    font-size: 95px;
+    transition: .3s;
+    color: rgb(0, 140, 255);
+}
+.titulo-home{
+    font-size: 30px;
+    text-align: center;
+}

@@ -67,7 +67,7 @@ const routes = [
 		exact: false,
 		routes: [
 			{
-				path: '/',
+				path: '/home',
 				component: Home,
 				exact: true
 			},
