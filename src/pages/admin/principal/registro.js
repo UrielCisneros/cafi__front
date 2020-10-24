@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { Drawer, Form, Button, Col, Row, Input, Select, DatePicker } from 'antd';
+import { Drawer, Form, Button, Col, Row, Input } from 'antd';
 import { EditOutlined } from '@ant-design/icons';
-
-const { Option } = Select;
 
 export default function RegistroInfoTienda() {
 	const [ visible, setVisible ] = useState(false);
@@ -42,24 +40,21 @@ export default function RegistroInfoTienda() {
 					<Row gutter={16}>
 						<Col span={12}>
 							<Form.Item
-								name="name"
-								label="Name"
-								rules={[ { required: true, message: 'Please enter user name' } ]}
+								name="quienesSomos"
+								label="Quienes Somos"
+								rules={[ { required: true, message: 'Campo requerido' } ]}
 							>
-								<Input placeholder="Please enter user name" />
+								<Input placeholder="quienes somos..." />
 							</Form.Item>
 						</Col>
 						<Col span={12}>
 							<Form.Item
-								name="url"
-								label="Url"
-								rules={[ { required: true, message: 'Please enter url' } ]}
+								name="ubicacion"
+								label="Ubicación"
+								rules={[ { required: true, message: 'Campo requerido' } ]}
 							>
 								<Input
-									style={{ width: '100%' }}
-									addonBefore="http://"
-									addonAfter=".com"
-									placeholder="Please enter url"
+									placeholder="Ubicación..."
 								/>
 							</Form.Item>
 						</Col>
@@ -67,68 +62,55 @@ export default function RegistroInfoTienda() {
 					<Row gutter={16}>
 						<Col span={12}>
 							<Form.Item
-								name="owner"
-								label="Owner"
-								rules={[ { required: true, message: 'Please select an owner' } ]}
+								name="urlPromocional"
+								label="URL Promocional"
+								rules={[ { required: true, message: 'Campo requerido' } ]}
 							>
-								<Select placeholder="Please select an owner">
-									<Option value="xiao">Xiaoxiao Fu</Option>
-									<Option value="mao">Maomao Zhou</Option>
-								</Select>
+								<Input placeholder="URL promocional..." />
 							</Form.Item>
 						</Col>
 						<Col span={12}>
 							<Form.Item
-								name="type"
-								label="Type"
-								rules={[ { required: true, message: 'Please choose the type' } ]}
+								name="face"
+								label="Facebook"
 							>
-								<Select placeholder="Please choose the type">
-									<Option value="private">Private</Option>
-									<Option value="public">Public</Option>
-								</Select>
+								<Input placeholder="enlace a facebook..." />
 							</Form.Item>
 						</Col>
 					</Row>
 					<Row gutter={16}>
 						<Col span={12}>
 							<Form.Item
-								name="approver"
-								label="Approver"
-								rules={[ { required: true, message: 'Please choose the approver' } ]}
+								name="whats"
+								label="WhatsApp"
 							>
-								<Select placeholder="Please choose the approver">
-									<Option value="jack">Jack Ma</Option>
-									<Option value="tom">Tom Liu</Option>
-								</Select>
+								<Input placeholder="enlace a whatsapp..." />
 							</Form.Item>
 						</Col>
 						<Col span={12}>
 							<Form.Item
-								name="dateTime"
-								label="DateTime"
-								rules={[ { required: true, message: 'Please choose the dateTime' } ]}
+								name="insta"
+								label="Instagram"
 							>
-								<DatePicker.RangePicker
-									style={{ width: '100%' }}
-									getPopupContainer={(trigger) => trigger.parentElement}
-								/>
+								<Input placeholder="enlace a instagram..." />
 							</Form.Item>
 						</Col>
 					</Row>
 					<Row gutter={16}>
-						<Col span={24}>
+						<Col span={12}>
 							<Form.Item
-								name="description"
-								label="Description"
-								rules={[
-									{
-										required: true,
-										message: 'please enter url description'
-									}
-								]}
+								name="youtube"
+								label="Youtube"
 							>
-								<Input.TextArea rows={4} placeholder="please enter url description" />
+								<Input placeholder="enlace a youtube..." />
+							</Form.Item>
+						</Col>
+						<Col span={12}>
+							<Form.Item
+								name="numeroDeClientes"
+								label="Numero de clientes"
+							>
+								<Input placeholder="Numero de clientes ..." />
 							</Form.Item>
 						</Col>
 					</Row>
