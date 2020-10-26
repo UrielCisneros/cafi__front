@@ -75,7 +75,7 @@ export default function Login() {
 							<Button type="primary" htmlType="submit">
 								Entrar
 							</Button>
-						</Form.Item>
+						</Form.Item> 
 					</Form.Item>
 				</Form>
 			</div>
