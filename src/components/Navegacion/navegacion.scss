@@ -1,4 +1,4 @@
-.layout-user .logo {
+.layout-user > .logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,4 +10,10 @@
 }
 .menu-nav{
     float: right;
+}
+
+@media(max-width: 768px){
+    .menu-nav{
+        float: none;
+    }
 }

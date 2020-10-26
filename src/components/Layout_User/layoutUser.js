@@ -19,7 +19,7 @@ export default function LayoutUser(props) {
                         <LoadRoutes routes={routes} />
                     </div>
                 </Content>
-                <Footer>
+                <Footer className="border">
                     FOOTER
                 </Footer>
 			</Layout>
