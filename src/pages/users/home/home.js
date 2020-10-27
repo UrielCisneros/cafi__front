@@ -1,7 +1,10 @@
 import React from 'react';
 
 import './home.scss';
+import Banner from './Banner/banner'
 import Geolocalizacion from '../../../components/Geolocalizacion/geolocalizacion';
+import CarruselEmpresas from './Carrusel/carrusel_empresas'
+import Testimonios from './Testimonios/testimonios'
 
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
@@ -12,30 +15,31 @@ import {
 	WhatsAppOutlined,
 	FacebookOutlined,
 	InstagramOutlined,
-	TwitterOutlined,
+	YoutubeOutlined 
 
 } from '@ant-design/icons';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export default function Home() {
 	return (
-		<div className="container-fluid">
-
-			<div className="seccion-1">
-				<h1>Banner</h1>
+		<div >
+			
+			<div className="row">
+				<Banner />				
 			</div>
 
-			<div className="row contendor-boton vender ">
-				<QueueAnim delay={700} type="scale" >
-					<Texty type="scale" key="a" className="boton-vender" >
-						Quiero vender en linea 
-					</Texty>
-				</QueueAnim>
+			<div className="row my-5 text-center justify-content-center align-items-center">
+					<QueueAnim delay={800} type="scale" >
+						<Link><Texty type="scale" key="a" className="boton-vender px-5" >
+							¡¿Quiero vender en linea?! 
+						</Texty></Link>
+					</QueueAnim>
+				
 			</div>
 
 			<div className="row contenedores" >
-				<QueueAnim type="left" className="col-lg-4 my-4">
+				<QueueAnim type="left" className="col-lg-4 my-3">
 					<Texty key="a" className="titulo-home">
 						Encuentranos en:
 					</Texty>
@@ -51,26 +55,34 @@ export default function Home() {
 						/>
 				</QueueAnim>
 
-				<QueueAnim type="bottom"  className="col-lg-4 my-5">
-					<h1 style={{fontSize: 100, textAlign: "center"}}>CAFI</h1>
+				<QueueAnim type="bottom"  className="col-lg-4 my-3">
+					<h1 style={{fontSize: 100, textAlign: "center"}}>CAFI-logo</h1>
 				</QueueAnim>
 				
-				<QueueAnim delay={900} type="right" className="col-lg-4  my-5">
+				<QueueAnim delay={900} type="right" className="col-lg-4 my-2">
 					<Texty key="a" className="titulo-home" >
-							Redes sociales:
+							Nuestras Redes sociales:
 					</Texty>
 					<div key="b" className="contenedor-reds">
 						<WhatsAppOutlined className="redes" />
 						<FacebookOutlined className="redes" />
 						<InstagramOutlined className="redes" />
-						<TwitterOutlined className="redes" />
+						<YoutubeOutlined  className="redes" />
 					</div>
 				</QueueAnim>
 			</div>
+			
+			<div className="row contenedor-black">
+				<Texty type="top"  delay={700} className="titulo-home">
+					¿Que opinan nuestros clientes?
+				</Texty>
 
-			<div className="row contenedor-cifras">
+				<Testimonios />
+
+			</div>
+
+			<div className="row contenedor-black">
 			<QueueAnim delay={700} type="bottom">
-				
 				<Texty type="top"  delay={700} className="titulo-home">
 					Empresas con CAFI
 				</Texty>
@@ -82,27 +94,24 @@ export default function Home() {
 								value: typeof 10 === 'number' ? 10 : 100,
 								floatLength: 0
 							},
-							duration: 1000
+							duration: 1500
 						}}
-						style={{ fontSize: 120, fontWeight: 'bold' }}
-						
+						style={{ fontSize: 140, fontWeight: 'bold' }}
 					>
 						0
 					</TweenOne>
 				</div>
-				<Texty type="top"  delay={700} className="titulo-home">
-					¿Que opinan nuestros clientes?
-				</Texty>
 			</QueueAnim>
-			
 			</div>
 
-			<div className="row">
+			<div className="row contenedores">
 				<QueueAnim delay={700} type="left">
-				<Texty type="scale" key="a" style={{fontSize: 30}} >
-						Empresas con CAFI 
+					<Texty  className=" mt-5 titulo-home" type="top"  delay={700} >
+						Empresas dentro de CAFI 
 					</Texty>
 				</QueueAnim>
+
+				<CarruselEmpresas />
 			</div>
 
 		</div>
