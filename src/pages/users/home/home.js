@@ -23,9 +23,9 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
 	return (
-		<div >
+		<div className="container-fluid">
 			
-			<div className="row">
+			<div className="row ">
 				<Banner />				
 			</div>
 
@@ -35,11 +35,10 @@ export default function Home() {
 							¡¿Quiero vender en linea?! 
 						</Texty></Link>
 					</QueueAnim>
-				
 			</div>
 
 			<div className="row contenedores" >
-				<QueueAnim type="left" className="col-lg-4 my-3">
+				<QueueAnim type="left" className="col-lg-4 my-1">
 					<Texty key="a" className="titulo-home">
 						Encuentranos en:
 					</Texty>
@@ -55,11 +54,11 @@ export default function Home() {
 						/>
 				</QueueAnim>
 
-				<QueueAnim type="bottom"  className="col-lg-4 my-3">
+				<QueueAnim type="bottom"  className="col-lg-4 my-1">
 					<h1 style={{fontSize: 100, textAlign: "center"}}>CAFI-logo</h1>
 				</QueueAnim>
 				
-				<QueueAnim delay={900} type="right" className="col-lg-4 my-2">
+				<QueueAnim delay={900} type="right" className="col-lg-4 my-1">
 					<Texty key="a" className="titulo-home" >
 							Nuestras Redes sociales:
 					</Texty>

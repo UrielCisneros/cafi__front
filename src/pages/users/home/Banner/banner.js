@@ -1,33 +1,19 @@
-// import React from 'react'
-
-// export default function banner() {
-//     return (
-//         <div className="container">
-            
-//         </div>
-//     )
-// }
-import React from 'react'
+import React from 'react';
+import './banner.scss';
+import Admin404 from '../../../admin/admin404'
 
 import BannerAnim, { Element } from 'rc-banner-anim';
 import TweenOne from 'rc-tween-one';
 import 'rc-banner-anim/assets/index.css';
 const BgElement = Element.BgElement;
+
 export default function Banner() {
-  
-    return (
-        <div>
-      <BannerAnim prefixCls="banner-user">
-        <Element key="aaa"
+	return (
+		<div className="user">
+		<BannerAnim prefixCls="banner-user">
+        <Element 
           prefixCls="banner-user-elem"
-          followParallax={{
-            delay: 1000,
-            data: [
-              { id: 'bg', value: 20, bgPosition: '50%', type: ['backgroundPositionX'] },
-              { id: 'title', value: 50, type: 'x' },
-              { id: 'content', value: -30, type: 'x' },
-            ],
-          }}
+          key="0"
         >
           <BgElement
             key="bg"
@@ -35,23 +21,19 @@ export default function Banner() {
             style={{
               background: '#364D79',
             }}
-            id="bg"
           />
-          <TweenOne className="banner-user-title" 
-            animation={{ y: 30, opacity: 0, type: 'from' }}
-            id="title"
-          >
+          <TweenOne className="banner-user-title" animation={{ y: 30, opacity: 0, type: 'from' }}>
             Ant Motion Banner
           </TweenOne>
           <TweenOne className="banner-user-text" 
             animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
-            id="content"
           >
             The Fast Way Use Animation In React
           </TweenOne>
         </Element>
-        <Element key="bbb"
+        <Element 
           prefixCls="banner-user-elem"
+          key="1" 
         >
           <BgElement
             key="bg"
@@ -70,8 +52,7 @@ export default function Banner() {
           </TweenOne>
         </Element>
       </BannerAnim>
-      </div>
-    );
-  }
-
-
+      <Admin404 />
+		</div>
+	);
+}
