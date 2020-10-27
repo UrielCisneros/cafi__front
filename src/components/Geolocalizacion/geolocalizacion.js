@@ -21,8 +21,8 @@ export default function Geolocalizacion({
 
 		//inicializar el map
 		const map = window.L.mapquest.map('map', {
-			center,
-			layers: window.L.mapquest.tileLayer(titleLayer),
+			center: center,
+			layers: window.L.mapquest.tileLayer('map'),
 			zoom
 		});
 

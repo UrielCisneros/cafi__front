@@ -4,10 +4,16 @@ import { EditOutlined, EyeOutlined } from '@ant-design/icons';
 import RegistroTestimonio from './registrar_testimonio';
 import Admin404 from '../admin404';
 import QueueAnim from 'rc-queue-anim';
+import verificarToken from '../../../config/verificar_token';
 
 const { Meta } = Card;
 
-export default function TestimoniosAdmin() {
+export default function TestimoniosAdmin(props) {
+
+	useEffect(() => {
+		verificarToken(props);
+	}, [props])
+	
 	const [ show, setShow ] = useState();
 	const [ updateList, setUpdateList ] = useState(true);
 	const [ items, setItems ] = useState([

@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import BannerAnim, { Element } from 'rc-banner-anim';
 import TweenOne from 'rc-tween-one';
 import 'rc-banner-anim/assets/index.css';
 import './banner.scss';
 import RegistroBanner from './registrar_banner';
 import Admin404 from '../admin404';
+import verificarToken from '../../../config/verificar_token';
  
 const BgElement = Element.BgElement;
 
-export default function BannerAdmin() {
+export default function BannerAdmin(props) {
+
+	useEffect(() => {
+		verificarToken(props);
+	}, [props])
+
 	return (
 		<div>
 			<div className="mb-4 contenedor-boton-registrar-admin">

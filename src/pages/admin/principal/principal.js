@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import QueueAnim from 'rc-queue-anim';
 import Texty from 'rc-texty';
 import TweenOne from 'rc-tween-one';
 import Children from 'rc-tween-one/lib/plugin/ChildrenPlugin';
+import { Tooltip } from 'antd';
 import './principal.scss';
 import {
 	EyeOutlined,
@@ -16,10 +17,18 @@ import { Link } from 'react-router-dom';
 import Geolocalizacion from '../../../components/Geolocalizacion/geolocalizacion';
 import RegistroInfoTienda from './registro';
 import Admin404 from '../admin404';
+import verificarToken from '../../../config/verificar_token';
 
 TweenOne.plugins.push(Children);
 
-export default function AdminPrincipal() {
+export default function AdminPrincipal(props) {
+	useEffect(
+		() => {
+			verificarToken(props);
+		},
+		[ props ]
+	);
+
 	return (
 		<div className="contenedor-admin-principal">
 			<div className="mb-4 contenedor-boton-registrar-admin">
@@ -76,10 +85,18 @@ export default function AdminPrincipal() {
 						Redes sociales
 					</Texty>
 					<div key="a" className="contenedor-redes">
-						<WhatsAppOutlined className="icon-redes" />
-						<FacebookOutlined className="icon-redes" />
-						<InstagramOutlined className="icon-redes" />
-						<TwitterOutlined className="icon-redes" />
+						<Tooltip title="3171145113" placement="topLeft">
+							<WhatsAppOutlined className="icon-redes" />
+						</Tooltip>
+						<Tooltip title="/absoluciones" placement="topLeft">
+							<FacebookOutlined className="icon-redes" />
+						</Tooltip>
+						<Tooltip title="/soluciones.ab" placement="topLeft">
+							<InstagramOutlined className="icon-redes" />
+						</Tooltip>
+						<Tooltip title="/diego.leon" placement="topLeft">
+							<TwitterOutlined className="icon-redes" />
+						</Tooltip>
 					</div>
 				</QueueAnim>
 				<QueueAnim delay={700} type="bottom" className="col-lg-4">

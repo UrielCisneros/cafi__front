@@ -5,10 +5,16 @@ import QueueAnim from 'rc-queue-anim';
 import RegistroServicios from './registro_servicios';
 import Admin404 from '../admin404';
 import './servicios.scss'
+import verificarToken from '../../../config/verificar_token';
 
 const { Meta } = Card;
 
-export default function ServiciosAdmin() {
+export default function ServiciosAdmin(props) {
+
+	useEffect(() => {
+		verificarToken(props);
+	}, [props])
+	
 	const [ show, setShow ] = useState();
 	const [ updateList, setUpdateList ] = useState(true);
 	const [ items, setItems ] = useState([

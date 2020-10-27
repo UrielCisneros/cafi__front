@@ -9,20 +9,16 @@ const layout = {
 };
 const key = 'updatable';
 
-export default function Login() {
-	
+export default function Login(props) {
 	const onFinish = async (credenciales) => {
-		console.log(credenciales)
 		message.loading({ content: 'Validando...', key });
 		await axios
-			.post('/user/login', credenciales, {
-				headers: {
-					'Content-Type': 'multipart/form-data'
-				}
-			})
+			.post('/user/login', credenciales)
 			.then((res) => {
-				console.log(res)
-				message.success({ content: 'Ok!', key, duration: 2 });
+				const token = res.data.token;
+				localStorage.setItem('token', token);
+				message.success({ content: '¡Usuario Validado!', key, duration: 2 });
+				props.history.push('/admin');
 			})
 			.catch((err) => {
 				console.log(err.response)

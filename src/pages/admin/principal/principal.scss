@@ -20,6 +20,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}.contenedor-clientes > a {
+    color: black;
 }
 .quienes-texto{
     padding: 30px;
@@ -51,7 +53,7 @@
     transition: .3s;
 }
 .icon-redes:hover{
-    font-size: 75px;
+    font-size: 70px;
     transition: .3s;
     color: rgb(0, 140, 255);
 }
@@ -66,7 +68,6 @@
     justify-content: flex-end;
 }
 .icon-center{
-    border: blueviolet solid!important;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -4,10 +4,16 @@ import { EditOutlined, EyeOutlined } from '@ant-design/icons';
 import Admin404 from '../admin404';
 import RegistroEmpresa from './registro_empresa';
 import QueueAnim from 'rc-queue-anim';
+import verificarToken from '../../../config/verificar_token';
 
 const { Meta } = Card;
 
-export default function EmpresasAdmin() {
+export default function EmpresasAdmin(props) {
+
+	useEffect(() => {
+		verificarToken(props);
+	}, [props])
+	
 	const [ show, setShow ] = useState();
 	const [ updateList, setUpdateList ] = useState(true);
 	const [ items, setItems ] = useState([

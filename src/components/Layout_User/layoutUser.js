@@ -10,7 +10,7 @@ export default function LayoutUser(props) {
 
 	return (
 		<div className="body">
-			<Layout className="layout">
+			<Layout className="layout bg-white">
                 <Header className="layout-user">
                     <Navegacion />
                 </Header>
