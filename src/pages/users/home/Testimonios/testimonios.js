@@ -1,114 +1,77 @@
-import React from 'react'
-
+import React, { Component } from "react";
 import './testimonios.scss'
 
+import Carousel from "react-spring-3d-carousel";
+import uuidv4 from "uuid";
+import { config } from "react-spring";
 import { Card } from 'antd';
 
-export default function Testimonios() {
-    const { Meta } = Card;
+const { Meta } = Card;
+
+export default class Testimonios extends Component {
+  state = {
+    goToSlide: 0,
+    offsetRadius: 1,
+    showNavigation: true,
+    config: config.gentle
+  };
+
+  slides = [
+    {
+      key: uuidv4(),
+      content: 
+        <Card
+            className="d-flex"
+            cover={<img  width="300px" height="300px"
+            src="https://picsum.photos/800/802/?random" alt="a"/>} >
+            <Meta className="datos-testimonio mt-5"
+             title="Testimonio Numero 1" description="Este es un testimonio de tu tienda CAFI" />
+        </Card>
+    },
+    {
+      key: uuidv4(),
+      content: 
+        <Card
+            className="d-flex"
+            cover={<img  width="300px" height="300px"
+            src="https://picsum.photos/800/802/?random" alt="a"/>} >
+            <Meta className="datos-testimonio mt-5" 
+            title="Testimonio Numero 2" description="Este es un testimonio de tu tienda CAFI" />
+        </Card>
+    },
+    {
+      key: uuidv4(),
+      content: 
+      <Card
+            className="d-flex"
+            cover={<img  width="300px" height="300px"
+            src="https://picsum.photos/800/802/?random" alt="a"/>} >
+            <Meta className="datos-testimonio mt-5" 
+            title="Testimonio Numero 3" description="Este es un testimonio de tu tienda CAFI" />
+        </Card>
+    },
+  ].map((slide, index) => {
+    return { ...slide, onClick: () => this.setState({ goToSlide: index }) };
+  });
+
+ 
+  onChangeInput = e => {
+    this.setState({
+      [e.target.name]: parseInt(e.target.value, 10) || 0
+    });
+  };
+
+  render() {
     return (
-            <div className="slider-testi">
-				<div className="slide-track">
-					<div className="slide">
-                        <Card hoverable style={{ width: 160 }} 
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                        >
-                            <Meta title="Europe Street beat" description="www.instagram.com" />
-                        </Card>
-					</div>
-
-                    <div className="slide">
-                        <Card hoverable style={{ width: 160 }} 
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                        >
-                            <Meta title="Europe Street beat" description="www.instagram.com" />
-                        </Card>
-					</div>
-
-                    <div className="slide">
-                        <Card hoverable style={{ width: 160 }} 
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                        >
-                            <Meta title="Europe Street beat" description="www.instagram.com" />
-                        </Card>
-					</div>
-
-                    <div className="slide">
-                        <Card hoverable style={{ width: 160 }} 
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                        >
-                            <Meta title="Europe Street beat" description="www.instagram.com" />
-                        </Card>
-					</div>
-
-                    <div className="slide">
-                        <Card hoverable style={{ width: 160 }} 
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                        >
-                            <Meta title="Europe Street beat" description="www.instagram.com" />
-                        </Card>
-					</div>
-
-                    <div className="slide">
-                        <Card hoverable style={{ width: 160 }} 
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                        >
-                            <Meta title="Europe Street beat" description="www.instagram.com" />
-                        </Card>
-					</div>
-
-                {/* Para que pueda funcionar debemos multiplicar por dos todas las imagenes o cards */}
-
-                    <div className="slide">
-                        <Card hoverable style={{ width: 160 }} 
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                        >
-                            <Meta title="Europe Street beat" description="www.instagram.com" />
-                        </Card>
-					</div>
-                    
-                    <div className="slide">
-                        <Card hoverable style={{ width: 160 }} 
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                        >
-                            <Meta title="Europe Street beat" description="www.instagram.com" />
-                        </Card>
-					</div>
-
-                    <div className="slide">
-                        <Card hoverable style={{ width: 160 }} 
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                        >
-                            <Meta title="Europe Street beat" description="www.instagram.com" />
-                        </Card>
-					</div>
-
-                    <div className="slide">
-                        <Card hoverable style={{ width: 160 }} 
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                        >
-                            <Meta title="Europe Street beat" description="www.instagram.com" />
-                        </Card>
-					</div>
-
-                    <div className="slide">
-                        <Card hoverable style={{ width: 160 }} 
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                        >
-                            <Meta title="Europe Street beat" description="www.instagram.com" />
-                        </Card>
-					</div>
-
-                    <div className="slide">
-                        <Card hoverable style={{ width: 160 }} 
-                        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-                        >
-                            <Meta title="Europe Street beat" description="www.instagram.com" />
-                        </Card>
-					</div>
-					
-					
-				</div>
-			</div>
-    )
+      <div style={{ width: "80%", height: "400px"}}>
+        <Carousel
+            slides={this.slides}
+            goToSlide={this.state.goToSlide}
+            offsetRadius={this.state.offsetRadius}
+            animationConfig={this.state.config}
+        />
+        
+      </div>
+    );
+  }
 }
