@@ -17,7 +17,6 @@ function headerAdmin(props) {
 		}
 	}
 	
-	console.log(decoded)
 	return (
 		<Fragment>
 			<div className="float-left">

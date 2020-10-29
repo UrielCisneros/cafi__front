@@ -42,6 +42,42 @@ export default function RegistroInfoTienda() {
 				}
 			>
 				<Form layout="vertical" hideRequiredMark>
+					<Row gutter={16}>
+						<Col span={12}>
+							<Form.Item name="imagen" label="Imagen">
+								<Input placeholder="Imagen de la empresa..." />
+							</Form.Item>
+						</Col>
+						<Col span={12}>
+							<Form.Item
+								name="nombre"
+								label="Nombre"
+								rules={[ { required: true, message: 'Campo requerido' } ]}
+							>
+								<Input placeholder="Nombre de la empresa..." />
+							</Form.Item>
+						</Col>
+					</Row>
+					<Row gutter={16}>
+						<Col span={12}>
+							<Form.Item
+								name="telefono"
+								label="Telefono"
+								rules={[ { required: true, message: 'Campo requerido' } ]}
+							>
+								<Input placeholder="Telefono de la empresa..." />
+							</Form.Item>
+						</Col>
+						<Col span={12}>
+							<Form.Item
+								name="correo"
+								label="Correo"
+								rules={[ { required: true, message: 'Campo requerido' } ]}
+							>
+								<Input placeholder="Correo de la empresa..." />
+							</Form.Item>
+						</Col>
+					</Row>
 					<Form.Item
 						name="quienesSomos"
 						label="Quienes Somos"
@@ -63,14 +99,30 @@ export default function RegistroInfoTienda() {
 							onEditorChange={handleEditorChange}
 						/>
 					</Form.Item>
+					<Form.Item
+						name="politicas"
+						label="Politicas"
+						rules={[ { required: true, message: 'Campo requerido' } ]}
+					>
+						<Editor
+							init={{
+								height: 250,
+								menubar: true,
+								plugins: [
+									'advlist autolink lists link image charmap print preview anchor',
+									'searchreplace visualblocks code fullscreen',
+									'insertdatetime media table paste code help wordcount'
+								],
+								toolbar:
+									'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help'
+							}}
+							onEditorChange={handleEditorChange}
+						/>
+					</Form.Item>
 					<Row gutter={16}>
 						<Col span={12}>
-							<Form.Item
-								name="ubicacion"
-								label="Ubicación"
-								rules={[ { required: true, message: 'Campo requerido' } ]}
-							>
-								<Input placeholder="Ubicación..." />
+							<Form.Item name="numeroDeClientes" label="Numero de clientes">
+								<Input placeholder="Numero de clientes ..." />
 							</Form.Item>
 						</Col>
 						<Col span={12}>
@@ -104,13 +156,6 @@ export default function RegistroInfoTienda() {
 						<Col span={12}>
 							<Form.Item name="youtube" label="Youtube">
 								<Input placeholder="enlace a youtube..." />
-							</Form.Item>
-						</Col>
-					</Row>
-					<Row gutter={16}>
-						<Col span={12}>
-							<Form.Item name="numeroDeClientes" label="Numero de clientes">
-								<Input placeholder="Numero de clientes ..." />
 							</Form.Item>
 						</Col>
 					</Row>

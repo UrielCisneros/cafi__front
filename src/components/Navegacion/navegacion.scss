@@ -11,6 +11,9 @@
 .menu-nav{
     float: right;
 }
+.ant-menu-horizontal{
+    border-bottom: none!important;
+}
 
 @media(max-width: 768px){
     .menu-nav{
