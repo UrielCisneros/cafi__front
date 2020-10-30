@@ -74,25 +74,25 @@ export default function AdminPrincipal(props) {
 				) : (
 					<div>
 						<div className="animaciones-container row mb-4">
-							<QueueAnim delay={500} type="left" className="col-lg-4">
-								<div className="datos-imagen-empresa">
+							<QueueAnim delay={300} type="top" className="col-lg-4">
+								<div key="a" className="datos-imagen-empresa">
 									<img className="imagen-empresa" alt="logo-empresa" src={aws + datos.logo} />
 								</div>
 							</QueueAnim>
-							<QueueAnim delay={500} type="right" className="col-lg-8">
-								<div className="datos-basicos-empresa">
+							<QueueAnim delay={300} type="top" className="col-lg-8">
+								<div key="a" className="datos-basicos-empresa">
 									<h1>
-										<Texty type="left" mode="sync" delay={100}>
+										<Texty type="left" mode="sync" delay={300}>
 											{datos.nombre}
 										</Texty>
 									</h1>
 									<h6>
-										<Texty type="left" mode="sync" delay={200}>
+										<Texty type="left" mode="sync" delay={400}>
 											{datos.correo}
 										</Texty>
 									</h6>
 									<h6>
-										<Texty type="left" mode="sync" delay={300}>
+										<Texty type="left" mode="sync" delay={500}>
 											{datos.telefono}
 										</Texty>
 									</h6>
@@ -100,9 +100,9 @@ export default function AdminPrincipal(props) {
 							</QueueAnim>
 						</div>
 						<Divider />
-						<div key="b" className="row animaciones-container">
-							<QueueAnim delay={700} type="left" className="col-lg-4">
-								<Texty type="left" mode="sync" delay={700} className="anim-title text-center">
+						<div className="row animaciones-container">
+							<QueueAnim delay={500} type="top" className="col-lg-4">
+								<Texty type="left" mode="sync" delay={600} className="anim-title text-center">
 									Redes sociales
 								</Texty>
 								{!datos.facebook && !datos.instagram && !datos.whatsapp && !datos.youtube ? (
@@ -166,7 +166,7 @@ export default function AdminPrincipal(props) {
 									</div>
 								)}
 							</QueueAnim>
-							<QueueAnim delay={700} type="bottom" className="col-lg-4">
+							<QueueAnim delay={600} type="top" className="col-lg-4">
 								<Texty type="top" mode="sync" delay={700} className="anim-title text-center">
 									Numero de clientes
 								</Texty>
@@ -185,8 +185,8 @@ export default function AdminPrincipal(props) {
 									</TweenOne>
 								</div>
 							</QueueAnim>
-							<QueueAnim delay={700} type="right" className="col-lg-4">
-								<Texty type="right" mode="sync" delay={700} className="anim-title text-center">
+							<QueueAnim delay={700} type="top" className="col-lg-4">
+								<Texty type="right" mode="sync" delay={800} className="anim-title text-center">
 									Video promocional
 								</Texty>
 								<div key="a" className="contenedor-clientes">
@@ -200,9 +200,9 @@ export default function AdminPrincipal(props) {
 								</div>
 							</QueueAnim>
 						</div>
-						<div key="a" className="row animaciones-container">
-							<QueueAnim delay={300} type="left" className="col-lg-4">
-								<Texty type="left" mode="sync" delay={500} className="anim-title">
+						<div className="row animaciones-container">
+							<QueueAnim delay={600} type="top" className="col-lg-4">
+								<Texty type="left" mode="sync" delay={700} className="anim-title">
 									Quiénes somos
 								</Texty>
 								<div key="b" className="contenedor-quienes">
@@ -216,8 +216,8 @@ export default function AdminPrincipal(props) {
 									</div>
 								</div>
 							</QueueAnim>
-							<QueueAnim delay={300} type="bottom" className="col-lg-4">
-								<Texty type="left" mode="sync" delay={500} className="anim-title">
+							<QueueAnim delay={700} type="top" className="col-lg-4">
+								<Texty type="left" mode="sync" delay={800} className="anim-title">
 									Polítcas de la empresa
 								</Texty>
 								<div key="b" className="contenedor-quienes">
@@ -231,8 +231,8 @@ export default function AdminPrincipal(props) {
 									</div>
 								</div>
 							</QueueAnim>
-							<QueueAnim delay={300} type="right" className="col-lg-4">
-								<Texty type="right" mode="sync" delay={500} className="anim-title">
+							<QueueAnim delay={800} type="top" className="col-lg-4">
+								<Texty type="right" mode="sync" delay={900} className="anim-title">
 									Ubicación
 								</Texty>
 								<div key="a" className="contenedor-ubicacion">
