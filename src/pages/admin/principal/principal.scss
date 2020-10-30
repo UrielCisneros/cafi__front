@@ -1,6 +1,9 @@
-/* .contenedor-admin-principal{
-    border: black solid;
-} */
+.divider-border::before, .divider-border::after{
+    border-top: rgb(226, 226, 226) .5px solid!important ;
+}
+.editor-tiny > .tox, .tox-tinymce{
+    margin-bottom: 15px!important;
+}
 .animaciones-container{
     /* border: rgb(255, 25, 25) solid; */
     display: flex;
@@ -20,7 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}.contenedor-clientes > a {
+}.contenedor-clientes > a, .contenedor-redes > a {
     color: black;
 }
 .quienes-texto{
@@ -53,7 +56,7 @@
     transition: .3s;
 }
 .icon-redes:hover{
-    font-size: 70px;
+    font-size: 67px;
     transition: .3s;
     color: rgb(0, 140, 255);
 }
@@ -61,7 +64,7 @@
 .anim-title{
     font-size: 24px;
     font-weight: 600;
-    line-height: 20px;
+    line-height: 30px;
 }
 .contenedor-boton-registrar-admin{
     display: flex;
@@ -71,4 +74,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.datos-imagen-empresa{
+    box-shadow: 0px 0px 21px -8px rgba(194,194,194,1);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagen-empresa{
+    max-width: 100%;
+    max-height: 100%;
+}
+.datos-basicos-empresa{
+    /* box-shadow: 0px 0px 21px -8px rgba(194,194,194,1); */
+    height: 150px;
 }
