@@ -22,14 +22,17 @@ export default function Banner() {
               background: '#364D79',
             }}
           />
+
           <TweenOne className="banner-user-title" animation={{ y: 30, opacity: 0, type: 'from' }}>
-            Ant Motion Banner
+            C A F I 
           </TweenOne>
+
           <TweenOne className="banner-user-text" 
-            animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
+            animation={{ y: 30, opacity: 0, type: 'from', delay: 800 }}
           >
-            The Fast Way Use Animation In React
+            Tu tienda OnLine
           </TweenOne>
+          
         </Element>
         <Element 
           prefixCls="banner-user-elem"
@@ -43,12 +46,12 @@ export default function Banner() {
             }}
           />
           <TweenOne className="banner-user-title" animation={{ y: 30, opacity: 0, type: 'from' }}>
-            Ant Motion Banner
+            EL NUEVO MUNDO
           </TweenOne>
           <TweenOne className="banner-user-text" 
-            animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
+            animation={{ y: 30, opacity: 0, type: 'from', delay: 800 }}
           >
-            The Fast Way Use Animation In React
+            Entra a la era de las ventas Online
           </TweenOne>
         </Element>
       </BannerAnim>

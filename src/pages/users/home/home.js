@@ -5,6 +5,7 @@ import Banner from './Banner/banner'
 import Geolocalizacion from '../../../components/Geolocalizacion/geolocalizacion';
 import CarruselEmpresas from './Carrusel/carrusel_empresas'
 import Testimonios from './Testimonios/testimonios'
+import SolicitudInformacion from './SolicitudForm/solicitud';
 
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
@@ -18,7 +19,7 @@ import {
 	YoutubeOutlined 
 
 } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 
 export default function Home() {
@@ -29,13 +30,15 @@ export default function Home() {
 				<Banner />				
 			</div>
 
-			<div className="row my-5 text-center justify-content-center align-items-center">
+			<SolicitudInformacion />
+
+			{/* <div className="row my-5 text-center justify-content-center align-items-center">
 					<QueueAnim delay={800} type="scale" >
-						<Link><Texty type="scale" key="a" className="boton-vender px-5" >
-							¡¿Quiero vender en linea?! 
-						</Texty></Link>
+						<Texty type="scale" key="a" className="boton-vender px-5" >
+							¡¿Quiero vender en linea?!
+						</Texty>
 					</QueueAnim>
-			</div>
+			</div> */}
 
 			<div className="row contenedores" >
 				<QueueAnim type="left" className="col-lg-4 my-1">
