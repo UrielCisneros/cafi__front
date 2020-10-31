@@ -1,23 +1,28 @@
 .user{
     width: 100%;
 }
+.wave{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
 
 .banner-user{
-    height: 330px;
+    height: 400px;
   }
   .banner-user-elem{
     text-align: center;
-    color: #fff;
+    color: #000;
     position: relative;
     overflow: hidden;
   }
   .banner-user-elem .banner-user-title{
-    font-size: 55px;
-    top: 30%;
+    font-size: 65px;
+    top: 10%;
   }
   .banner-user-elem .banner-user-text{
-    font-size: 35px;
-    top: 30%;
+    font-size: 45px;
+    top: 10%;
   }
   .banner-anim-elem .bg{
     width: 100%;
@@ -26,4 +31,17 @@
     top: 0;
     left: 0;
     overflow: hidden;
+    background:url("https://picsum.photos/800/802/?random");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: center;
+  }
+
+  .boton-ver{
+    top: 15%;
+    width: 170px;
+    text-align: center;
+    border-radius: 18px;
+    border-style: solid;
+    font-size: 25px;
   }

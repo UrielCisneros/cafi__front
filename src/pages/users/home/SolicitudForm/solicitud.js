@@ -21,8 +21,8 @@ export default function SolicitudInformacion() {
 	};
 
 	return (
-		<div>
-            <div className="row my-5 text-center justify-content-center align-items-center" onClick={showDrawer}>
+		<div className="container-fluid">
+            <div className="row my-5 contenedor-boton" onClick={showDrawer}>
 					<QueueAnim delay={800} type="scale" >
 						<Texty type="scale" key="a" className="boton-vender px-5" >
 							¡¿Quiero vender en linea?!

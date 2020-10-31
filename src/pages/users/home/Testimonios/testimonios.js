@@ -22,7 +22,7 @@ export default class Testimonios extends Component {
       content: 
         <Card
             className="d-flex"
-            cover={<img  width="300px" height="300px"
+            cover={<img  width="300px" height="300px" className="flecha"
             src="https://picsum.photos/800/802/?random" alt="a"/>} >
             <Meta className="datos-testimonio mt-5"
              title="Testimonio Numero 1" description="Este es un testimonio de tu tienda CAFI" />
@@ -33,7 +33,7 @@ export default class Testimonios extends Component {
       content: 
         <Card
             className="d-flex"
-            cover={<img  width="300px" height="300px"
+            cover={<img  width="300px" height="300px" className="flecha"
             src="https://picsum.photos/800/802/?random" alt="a"/>} >
             <Meta className="datos-testimonio mt-5" 
             title="Testimonio Numero 2" description="Este es un testimonio de tu tienda CAFI" />
@@ -44,7 +44,7 @@ export default class Testimonios extends Component {
       content: 
       <Card
             className="d-flex"
-            cover={<img  width="300px" height="300px"
+            cover={<img  width="300px" height="300px" className="flecha"
             src="https://picsum.photos/800/802/?random" alt="a"/>} >
             <Meta className="datos-testimonio mt-5" 
             title="Testimonio Numero 3" description="Este es un testimonio de tu tienda CAFI" />
@@ -63,8 +63,9 @@ export default class Testimonios extends Component {
 
   render() {
     return (
-      <div style={{ width: "80%", height: "400px"}}>
+      <div style={{ width: "75%", height: "450px"}}>
         <Carousel
+            className="flotar"
             slides={this.slides}
             goToSlide={this.state.goToSlide}
             offsetRadius={this.state.offsetRadius}
