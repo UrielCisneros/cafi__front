@@ -64,11 +64,11 @@ export default function AdminPrincipal(props) {
 	);
 
 	return (
-		<Spinner loading={loading}>
-			<div className="contenedor-admin-principal">
-				<div className="mb-4 contenedor-boton-registrar-admin">
-					<RegistroInfoTienda control={control} reload={[ reload, setReload ]} />
-				</div>
+		<div className="contenedor-admin-principal">
+			<div className="mb-4 contenedor-boton-registrar-admin">
+				<RegistroInfoTienda control={control} reload={[ reload, setReload ]} datosEmpresa={datos} />
+			</div>
+			<Spinner loading={loading}>
 				{datos.length === 0 ? (
 					<Admin404 />
 				) : (
@@ -128,11 +128,7 @@ export default function AdminPrincipal(props) {
 											<div className="d-none" />
 										) : (
 											<Tooltip title={datos.facebook} placement="topLeft">
-												<a
-													rel="noopener noreferrer"
-													target="_blank"
-													href={datos.facebook}
-												>
+												<a rel="noopener noreferrer" target="_blank" href={datos.facebook}>
 													<FacebookOutlined className="icon-redes" />
 												</a>
 											</Tooltip>
@@ -141,11 +137,7 @@ export default function AdminPrincipal(props) {
 											<div className="d-none" />
 										) : (
 											<Tooltip title={datos.instagram} placement="topLeft">
-												<a
-													rel="noopener noreferrer"
-													target="_blank"
-													href={datos.instagram}
-												>
+												<a rel="noopener noreferrer" target="_blank" href={datos.instagram}>
 													<InstagramOutlined className="icon-redes" />
 												</a>
 											</Tooltip>
@@ -154,11 +146,7 @@ export default function AdminPrincipal(props) {
 											<div className="d-none" />
 										) : (
 											<Tooltip title={datos.youtube} placement="topLeft">
-												<a
-													rel="noopener noreferrer"
-													target="_blank"
-													href={datos.youtube}
-												>
+												<a rel="noopener noreferrer" target="_blank" href={datos.youtube}>
 													<YoutubeOutlined className="icon-redes" />
 												</a>
 											</Tooltip>
@@ -251,7 +239,7 @@ export default function AdminPrincipal(props) {
 						</div>
 					</div>
 				)}
-			</div>
-		</Spinner>
+			</Spinner>
+		</div>
 	);
 }

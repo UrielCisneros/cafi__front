@@ -30,6 +30,7 @@ export default function RegistroInfoTienda(props) {
 	const { control } = props;
 	const [ reload, setReload ] = props.reload;
 	const [ datosEmpresa, setDatosEmpresa ] = useState([]);
+	const [ disabled, setDisabled ] = useState(false);
 
 	/* drawer */
 	const showDrawer = () => setVisible(true);
@@ -48,18 +49,21 @@ export default function RegistroInfoTienda(props) {
 				file.type === 'image/jpeg' ||
 				file.type === 'image/webp'
 			) {
+				setDisabled(false);
 				return false;
 			}
 			notification.error({
 				message: 'Formato de imagen no válido',
 				duration: 2
 			});
+			setDisabled(true);
 		},
 		onChange: ({ fileList, file }) => {
 			if (fileList.length !== 0) {
 				setImagen(file);
 			} else {
 				setImagen(null);
+				setDisabled(false);
 				form.resetFields([ 'imagen' ]);
 			}
 			setFileList(fileList);
@@ -274,7 +278,7 @@ export default function RegistroInfoTienda(props) {
 						<Button onClick={onClose} type="default" style={{ marginRight: 8 }}>
 							Cancelar
 						</Button>
-						<Button form="form-registro-tienda" type="primary" htmlType="submit">
+						<Button form="form-registro-tienda" type="primary" htmlType="submit" disabled={disabled}>
 							Guardar
 						</Button>
 					</div>
