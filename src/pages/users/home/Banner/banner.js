@@ -43,10 +43,11 @@ export default function Banner() {
 					    </path>
 				    </svg>
 				  </div>
+          
         </Element>
         
       </BannerAnim>
-      
+
 		  </div>
     
 	);

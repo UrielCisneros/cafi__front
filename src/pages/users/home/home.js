@@ -28,21 +28,22 @@ export default function Home() {
 			
 			<div className="row contenedores">
 				<Banner />
-			</div>
 
+				
+			</div>
 			<div className="row contenedores">
 				<SolicitudInformacion />
 			</div>
 
-			<div className="row contenedor-info mt-5" >
-					<QueueAnim type="left" className=" col-lg-4 mt-5">
+			<div className="row mt-5 mx-auto" >
+				<div className="col-lg-5 mx-auto contenedor-info">
+					<QueueAnim type="left">
 						<Texty key="a" className="titulo-home">
 							Encuentranos en:
 						</Texty>
 						<Geolocalizacion
-								
 								width="100%"
-								height="200px"
+								height="250px"
 								center={[ 19.771758, -104.366652 ]}
 								titleLayer={'map'}
 								zoom={15}
@@ -51,22 +52,30 @@ export default function Home() {
 								draggable="false"
 							/>
 					</QueueAnim>
+				</div>
 
-					<QueueAnim type="bottom" className=" col-lg-4">
-						<h1 style={{fontSize: 100, textAlign: "center"}}>CAFI-logo</h1>
-					</QueueAnim>
+				<div className="col-lg-5 mx-auto mt-4">
+					<img height="320px" width="100%" src="https://picsum.photos/800/802/?random" alt="a"/>				
+				</div>
 
-					<QueueAnim delay={900} type="right" className=" col-lg-4">
-						<Texty key="a" className="titulo-home" >
+				<div className="col-lg-5 mx-auto hovers mt-5">
+					<img  height="320px" width="100%" src="https://picsum.photos/800/802/?random" alt="ss"/>				
+				</div>
+
+				<div className="col-lg-5 contenedor-info mt-5">
+					<QueueAnim delay={900} type="right" >
+						<Texty key="a" className="titulo-home mt-5" >
 								Nuestras Redes sociales:
 						</Texty>
-						<div key="b" className="contenedor-reds">
+						<div key="b" className="contenedor-reds mx-auto mt-5">
 							<WhatsAppOutlined className="redes" />
 							<FacebookOutlined className="redes" />
 							<InstagramOutlined className="redes" />
 							<YoutubeOutlined  className="redes" />
 						</div>
 					</QueueAnim>
+				</div>
+					
 			</div>
 			
 			<div className="row contenedor-carrusel mt-4">
@@ -79,26 +88,26 @@ export default function Home() {
 			</div>
 
 			<div className="row contenedor-numero">
-			<QueueAnim delay={700} type="bottom">
-				<Texty type="top"  delay={700} className="titulo-home">
-					Empresas con CAFI
-				</Texty>
+					<QueueAnim delay={700} type="bottom">
+						<Texty type="top"  delay={700} className="titulo-home ">
+							Empresas con CAFI
+						</Texty>
 
-				<div key="a" className="text-center ">
-					<TweenOne
-						animation={{
-							Children: {
-								value: typeof 10 === 'number' ? 10 : 100,
-								floatLength: 0
-							},
-							duration: 1500
-						}}
-						style={{ fontSize: 140, fontWeight: 'bold' }}
-					>
-						0
-					</TweenOne>
-				</div>
-			</QueueAnim>
+						<div key="a" className="text-center ">
+							<TweenOne
+								animation={{
+									Children: {
+										value: typeof 10 === 'number' ? 10 : 100,
+										floatLength: 0
+									},
+									duration: 1500
+								}}
+								style={{ fontSize: 140, fontWeight: 'bold' }}
+							>
+								0
+							</TweenOne>
+						</div>
+					</QueueAnim>
 			</div>
 
 			<div className="row contenedores">
