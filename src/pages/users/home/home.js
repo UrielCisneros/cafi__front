@@ -31,9 +31,7 @@ export default function Home() {
 
 				
 			</div>
-			<div className="row contenedores">
-				<SolicitudInformacion />
-			</div>
+			
 
 			<div className="row mt-5 mx-auto" >
 				<div className="col-lg-5 mx-auto contenedor-info">

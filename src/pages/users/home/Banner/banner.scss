@@ -8,7 +8,7 @@
 }
 
 .banner-user{
-    height: 430px;
+    height: 640px;
   }
   .banner-user-elem{
     text-align: center;
@@ -39,9 +39,14 @@
 
   .boton-ver{
     top: 15%;
-    width: 170px;
     text-align: center;
+    width: 450px;
     border-radius: 18px;
-    border-style: solid;
-    font-size: 25px;
+    font-size: 28px;
+    background: white;
+  }
+
+  .boton-ver:hover{
+    transition: .3s;
+    font-size: 32px;
   }
