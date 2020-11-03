@@ -19,7 +19,7 @@ import {
 
 export default function Footer() {
     return (
-            <div className="container-fluid principal my-4">
+            <div className="container-fluid my-4">
                 <div className="row text-center">
                     <div className="d-none d-sm-none d-md-block col-lg-3 mt-3 mx-auto">
                     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />

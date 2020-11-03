@@ -1,10 +1,10 @@
 import React from 'react';
 
 import './home.scss';
-import Banner from './Banner/banner'
-// import Geolocalizacion from '../../../components/Geolocalizacion/geolocalizacion';
+import Portada from './Portada/portada'
 import CarruselEmpresas from './Carrusel/carrusel_empresas'
 import Testimonios from './Testimonios/testimonios'
+import Banner from './Banner/banner'
 
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
@@ -15,156 +15,139 @@ import {
 	WhatsAppOutlined,
 	FacebookOutlined,
 	InstagramOutlined,
-	YoutubeOutlined 
+	YoutubeOutlined,
+	HomeOutlined
 
 } from '@ant-design/icons';
-//import { Link } from 'react-router-dom';
 
+const style= {
+    backgroundImage: `url("https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?cs=srgb&dl=pexels-christina-morillo-1181406.jpg&fm=jpg")`,
+	
+
+};
 
 export default function Home() {
 	return (
-		<div className="container-fluid principal">
-			
-			<div className="row contenedores">
-				
-				<Banner />
-				
-			</div>
+		<div className="container-fluid">
 
-			<div className="col-lg-3 row contenedores">
-				<Planet centerContent={
-				<div className="planet-p"/>}
+			<div className="row col-lg-3 planetas">
+				<Planet className="planet-p" 
+				half={true}
+				hideOrbit={true}
+				bounceOnClose
+				rotation={105}
+    			tension={500}
+				friction={19}
+				orbitRadius={100}
+				centerContent={<div className="planet-p row px-5">
+					<HomeOutlined />
+				</div>}
 				autoClose
 				>
-					<div className="planet mx-auto">
-						<WhatsAppOutlined />
+					<div />
+					<div className="planet">
+						<WhatsAppOutlined style={{color: "green"}}/>
+					</div>
+					<div className="planet">
+						<FacebookOutlined style={{color: "blue"}}/>
 					</div>
 					
-					<div className="planet"/>
+					<div className="planet">
+						<InstagramOutlined style={{color: "purple"}}/>
+					</div>
+					<div className="planet">
+						<YoutubeOutlined style={{color: "red"}}/>
+					</div>
+					<div />
+					<div />
+					<div />
+					<div />
+					
+									
 				</Planet>
 			</div>
 
-			<div className="row mt-5">
-				<div className="col-lg-10 mx-auto video">
-					<h1>Video Promocional</h1>
+			<div className="principal"> 
 
-					<iframe
-						width="95%"						
-						height="85%"
-						src="https://www.youtube.com/embed/t_Fi3J4UTlg" 
-						frameborder="0" 
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-						allowfullscreen>
-					</iframe>
-
-				</div>
-			</div>
-
-			{/* <div className="row mt-5 mx-auto" >
-				
-				<div className="col-lg-5 mx-auto contenedor-info">
-					<QueueAnim type="left">
-						<Texty key="a" className="titulo-home">
-							Encuentranos en:
-						</Texty>
-						<Geolocalizacion
-								width="100%"
-								height="250px"
-								center={[ 19.771758, -104.366652 ]}
-								titleLayer={'map'}
-								zoom={15}
-								apikey="I0G4Jr6RUg71dsHIRF0qGzn0l39bAY1V"
-								nombreMarcador="TIENDA CAFI"
-								draggable="false"
-							/>
-					</QueueAnim>
-				</div>
-
-				<div className="col-lg-5 mx-auto mt-4">
-					<img height="320px" width="100%" src="https://picsum.photos/800/802/?random" alt="a"/>				
-				</div>
-
-				<div className="col-lg-5 mx-auto hovers mt-5">
-					<img  height="320px" width="100%" src="https://picsum.photos/800/802/?random" alt="ss"/>				
-				</div>
-
-				<div className="col-lg-5 contenedor-info mt-5">
-					<QueueAnim delay={900} type="right" >
-						<Texty key="a" className="titulo-home mt-5" >
-								Nuestras Redes sociales:
-						</Texty>
-						<div key="b" className="contenedor-reds mx-auto mt-5">
-							<WhatsAppOutlined className="redes" />
-							<FacebookOutlined className="redes" />
-							<InstagramOutlined className="redes" />
-							<YoutubeOutlined  className="redes" />
-						</div>
-					</QueueAnim>
-				</div>
+				<div className="row contenedores">
 					
-			</div> */}
-			
-			<div className="row contenedor-carrusel mt-4">
-				
-					<div className="wave" style={{height: "150px", overflow: "hidden"}} >
-						<svg viewBox="0 0 500 150"  preserveAspectRatio="none" style={{height: "100%", width: "100%"}}>
-						<path d="M-11.06,44.70 C74.72,347.66 369.86,-169.44 556.65,199.64 L500.00,0.00 L0.00,0.00 Z" style={{stroke: "none", fill: "#fff"}}>
-						</path>
-						
-						</svg>
-					</div>
+					<Portada />
 					
+				</div>
 
-				<Texty delay={700} className="titulo-home mt-5">
-					¿Que opinan nuestros clientes?
-				</Texty>
+				<div className="contenedores mt-5">
+					<div className="col-lg-10 mx-auto video">
+						<h1>Video Promocional</h1>
 
-				<Testimonios />
+						<iframe
+							width="85%"						
+							height="85%"
+							src="https://www.youtube.com/embed/t_Fi3J4UTlg" 
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+						</iframe>
 
-					<div className="wave" style={{height: "150px", overflow: "hidden"}} >
-						<svg viewBox="0 0 500 150"  preserveAspectRatio="none" style={{height: "100%", width: "100%"}}>
-						<path d="M0.00,49.99 C138.48,287.46 371.56,-114.18 512.08,138.45 L500.00,150.00 L0.00,150.00 Z" style={{stroke: "none", fill: "#fff"}}>
-						</path>
-						
-						</svg>
 					</div>
+				</div>
+
 				
-			</div>
-
-			<div className="row contenedor-numero">
-					<QueueAnim delay={700} type="bottom">
-						<Texty type="top"  delay={700} className="titulo-home ">
-							Empresas con CAFI
-						</Texty>
-
-						<div key="a" className="text-center ">
-							<TweenOne
-								animation={{
-									Children: {
-										value: typeof 10 === 'number' ? 10 : 100,
-										floatLength: 0
-									},
-									duration: 1500
-								}}
-								style={{ fontSize: 140, fontWeight: 'bold' }}
-							>
-								0
-							</TweenOne>
+				<div className="row contenedor-carrusel mt-4">
+					
+						<div className="wave" style={{height: "150px", overflow: "hidden"}} >
+							<svg viewBox="0 0 500 150"  preserveAspectRatio="none" style={{height: "100%", width: "100%"}}>
+							<path d="M-11.06,44.70 C74.72,347.66 369.86,-169.44 556.65,199.64 L500.00,0.00 L0.00,0.00 Z" style={{stroke: "none", fill: "#fff"}}>
+							</path>
+							
+							</svg>
 						</div>
-					</QueueAnim>
-			</div>
+						
 
-			<div className="row contenedores">
-				<QueueAnim delay={700} type="left">
-					<Texty  className=" mt-5 titulo-home" type="top"  delay={700} >
-						Empresas dentro de CAFI
+					<Texty delay={700} className="titulo-home mt-5">
+						¿Que opinan nuestros clientes?
 					</Texty>
-				</QueueAnim>
 
-				<CarruselEmpresas />
-			</div>
+					<Testimonios />
 
+				</div>
+
+				<div className="row contenedor-numero mt-5" style={style}>
+						<QueueAnim delay={700} type="bottom">
+							<Texty type="top"  delay={700} className="titulo-home ">
+								Empresas con CAFI
+							</Texty>
+
+							<div key="a" className="text-center ">
+								<TweenOne
+									animation={{
+										Children: {
+											value: typeof 10 === 'number' ? 10 : 100,
+											floatLength: 0
+										},
+										duration: 1500
+									}}
+									style={{ fontSize: 120, fontWeight: 'bold' }}
+								>
+									0
+								</TweenOne>
+							</div>
+						</QueueAnim>
+				</div>
+
+				<div className="row mt-5">
+					<Banner />
+				</div>
+
+				<div className="row contenedores">
+					<QueueAnim delay={700} type="left">
+						<Texty  className=" mt-5 titulo-home" type="top"  delay={700} >
+							Empresas dentro de CAFI
+						</Texty>
+					</QueueAnim>
+
+					<CarruselEmpresas />
+				</div>
 			
+			</div>
 
 		</div>
 	);

@@ -1,4 +1,4 @@
-.user{
+.banner-home{
     width: 100%;
 }
 .wave-principal{
@@ -7,46 +7,38 @@
   bottom: 0;
 }
 
-.banner-user{
-    height: 640px;
+.banner-home-user{
+    height: 420px;
   }
-  .banner-user-elem{
+  .banner-home-elem{
     text-align: center;
     color: #000;
     position: relative;
     overflow: hidden;
   }
-  .banner-user-elem .banner-user-title{
+  .banner-home-elem .banner-home-title{
     font-size: 65px;
     top: 10%;
   }
-  .banner-user-elem .banner-user-text{
+  .banner-home-elem .banner-home-text{
     font-size: 45px;
     top: 10%;
   }
-  .banner-anim-elem .bg{
+   .home-bg{
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     overflow: hidden;
-    background:url("https://picsum.photos/800/802/?random");
-    background-attachment: fixed;
-    background-position: center;
-    background-size: center;
+    // background-attachment: fixed;
+    // background-position: center;
+    // background-size: center;
+    
+    background: #D3CCE3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+  
   }
 
-  .boton-ver{
-    top: 15%;
-    text-align: center;
-    width: 450px;
-    border-radius: 18px;
-    font-size: 28px;
-    background: white;
-  }
-
-  .boton-ver:hover{
-    transition: .3s;
-    font-size: 32px;
-  }
