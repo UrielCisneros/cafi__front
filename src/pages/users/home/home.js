@@ -2,15 +2,14 @@ import React from 'react';
 
 import './home.scss';
 import Banner from './Banner/banner'
-import Geolocalizacion from '../../../components/Geolocalizacion/geolocalizacion';
+// import Geolocalizacion from '../../../components/Geolocalizacion/geolocalizacion';
 import CarruselEmpresas from './Carrusel/carrusel_empresas'
 import Testimonios from './Testimonios/testimonios'
-import SolicitudInformacion from './SolicitudForm/solicitud';
 
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import Texty from 'rc-texty';
-
+import { Planet } from 'react-planet';
 
 import {
 	WhatsAppOutlined,
@@ -27,13 +26,42 @@ export default function Home() {
 		<div className="container-fluid principal">
 			
 			<div className="row contenedores">
+				
 				<Banner />
-
 				
 			</div>
-			
 
-			<div className="row mt-5 mx-auto" >
+			<div className="col-lg-3 row contenedores">
+				<Planet centerContent={
+				<div className="planet-p"/>}
+				autoClose
+				>
+					<div className="planet mx-auto">
+						<WhatsAppOutlined />
+					</div>
+					
+					<div className="planet"/>
+				</Planet>
+			</div>
+
+			<div className="row mt-5">
+				<div className="col-lg-10 mx-auto video">
+					<h1>Video Promocional</h1>
+
+					<iframe
+						width="95%"						
+						height="85%"
+						src="https://www.youtube.com/embed/t_Fi3J4UTlg" 
+						frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+						allowfullscreen>
+					</iframe>
+
+				</div>
+			</div>
+
+			{/* <div className="row mt-5 mx-auto" >
+				
 				<div className="col-lg-5 mx-auto contenedor-info">
 					<QueueAnim type="left">
 						<Texty key="a" className="titulo-home">
@@ -74,15 +102,33 @@ export default function Home() {
 					</QueueAnim>
 				</div>
 					
-			</div>
+			</div> */}
 			
 			<div className="row contenedor-carrusel mt-4">
+				
+					<div className="wave" style={{height: "150px", overflow: "hidden"}} >
+						<svg viewBox="0 0 500 150"  preserveAspectRatio="none" style={{height: "100%", width: "100%"}}>
+						<path d="M-11.06,44.70 C74.72,347.66 369.86,-169.44 556.65,199.64 L500.00,0.00 L0.00,0.00 Z" style={{stroke: "none", fill: "#fff"}}>
+						</path>
+						
+						</svg>
+					</div>
+					
+
 				<Texty delay={700} className="titulo-home mt-5">
 					¿Que opinan nuestros clientes?
 				</Texty>
 
 				<Testimonios />
 
+					<div className="wave" style={{height: "150px", overflow: "hidden"}} >
+						<svg viewBox="0 0 500 150"  preserveAspectRatio="none" style={{height: "100%", width: "100%"}}>
+						<path d="M0.00,49.99 C138.48,287.46 371.56,-114.18 512.08,138.45 L500.00,150.00 L0.00,150.00 Z" style={{stroke: "none", fill: "#fff"}}>
+						</path>
+						
+						</svg>
+					</div>
+				
 			</div>
 
 			<div className="row contenedor-numero">
@@ -117,6 +163,8 @@ export default function Home() {
 
 				<CarruselEmpresas />
 			</div>
+
+			
 
 		</div>
 	);
