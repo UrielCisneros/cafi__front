@@ -4,7 +4,7 @@
 }
 
 .titulo-home{
-    font-size: 45px;
+    font-size: 55px;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -15,23 +15,32 @@
     
 }
 
+.contenedor-video{
+    justify-content: center;
+    align-items: center;
+    //min-width: 100vh;
+    min-height: 100vh;
+    background: url("./Apoyo_estilos/fondo.jpg") no-repeat;
+
+    background-attachment: center;
+    background-position: center center;
+    background-size: cover;
+}
 .video{
     justify-content: center;
     align-items: center;
     text-align: center;
     color: black;
-    height: 650px;
-    // -webkit-box-shadow: 0px 0px 37px 13px rgba(0,0,0,0.75);
-    // -moz-box-shadow: 0px 0px 37px 13px rgba(0,0,0,0.75);
+    height: 750px;
+   
 }
-
-
 
 .contenedor-carrusel{
     justify-content: center;
     background-color: black;
     color: white;
-    //clip-path: polygon(0 0, 100% 12%, 100% 100%, 0 85%);
+   //clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+
 }
 
 .contenedor-numero{
@@ -43,7 +52,6 @@
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-   
     
 }
 

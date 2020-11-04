@@ -28,7 +28,7 @@ const style= {
 
 export default function Home() {
 	return (
-		<div className="container-fluid">
+		<div className="container-fluid principal">
 
 			<div className="row col-lg-3 planetas">
 				<Planet className="planet-p" 
@@ -75,11 +75,12 @@ export default function Home() {
 					
 				</div>
 
-				<div className="contenedores mt-5">
-					<div className="col-lg-10 mx-auto video">
-						<h1>Video Promocional</h1>
+				<div className="contenedor-video ">
+					<div className="col-lg-12 mx-auto video">
+						<h1 style={{fontSize: 50}} className="mx-auto">Video Promocional</h1>
 
 						<iframe
+							className="mt-5"
 							width="85%"						
 							height="85%"
 							src="https://www.youtube.com/embed/t_Fi3J4UTlg" 
@@ -91,17 +92,8 @@ export default function Home() {
 				</div>
 
 				
-				<div className="row contenedor-carrusel mt-4">
+				<div className="row contenedor-carrusel">
 					
-						<div className="wave" style={{height: "150px", overflow: "hidden"}} >
-							<svg viewBox="0 0 500 150"  preserveAspectRatio="none" style={{height: "100%", width: "100%"}}>
-							<path d="M-11.06,44.70 C74.72,347.66 369.86,-169.44 556.65,199.64 L500.00,0.00 L0.00,0.00 Z" style={{stroke: "none", fill: "#fff"}}>
-							</path>
-							
-							</svg>
-						</div>
-						
-
 					<Texty delay={700} className="titulo-home mt-5">
 						¿Que opinan nuestros clientes?
 					</Texty>

@@ -63,7 +63,7 @@ export default class Testimonios extends Component {
 
   render() {
     return (
-      <div style={{ width: "80%", height: "400px"}}>
+      <div style={{ width: "78%", height: "500px"}}>
         
         <Carousel
             className="flotar"

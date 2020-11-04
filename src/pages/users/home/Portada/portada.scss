@@ -1,10 +1,13 @@
 .portada{
     width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
+
 }
 .wave-principal{
   position: absolute;
   width: 100%;
   bottom: 0;
+
 }
 
 .portada-user{
@@ -18,12 +21,12 @@
     overflow: hidden;
   }
   .portada-user-elem .portada-user-title{
-    font-size: 75px;
-    top: 10%;
+    font-size: 85px;
+    top: 20%;
   }
   .portada-user-elem .portada-user-text{
-    font-size: 45px;
-    top: 10%;
+    font-size: 55px;
+    top: 20%;
   }
   .portada-anim-elem, .bg{
     width: 100%;
@@ -36,18 +39,4 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-  }
-
-  .boton-ver{
-    top: 15%;
-    text-align: center;
-    width: 450px;
-    border-radius: 18px;
-    font-size: 28px;
-    background: white;
-  }
-
-  .boton-ver:hover{
-    transition: .3s;
-    font-size: 32px;
   }
