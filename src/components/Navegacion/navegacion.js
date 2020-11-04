@@ -11,8 +11,8 @@ export default function Navegacion() {
 		<Fragment>
             <div className="logo">logo</div>
 			<Menu defaultSelectedKeys={[ window.location.pathname ]} mode="horizontal" className="menu-nav">
-				<Menu.Item key="/home">
-					<Link to="/home">Inicio</Link>
+				<Menu.Item key="/">
+					<Link to="/">Inicio</Link>
 				</Menu.Item>
 				<SubMenu key="/servicios" title="Servicios">
 					<Menu.ItemGroup title="Item 1">

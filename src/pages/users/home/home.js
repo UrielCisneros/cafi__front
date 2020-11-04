@@ -82,7 +82,7 @@ export default function Home() {
 						<iframe
 							className="mt-5"
 							width="85%"						
-							height="85%"
+							height="75%"
 							src="https://www.youtube.com/embed/t_Fi3J4UTlg" 
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 							allowfullscreen>
