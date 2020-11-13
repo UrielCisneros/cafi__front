@@ -2,12 +2,15 @@
     align-items: center;
     text-align: center;
 
-    font-size: 44px;
+    font-size: 50px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .principal{
-    background: url("./Fondo.jpg");
+    
+    background: #28304886; 
+    background: -webkit-linear-gradient(to right, #859398af, #2830488f),  url("./Fondo.jpg");  
+    background: linear-gradient(to right, #8593988c, #28304885),  url("./Fondo.jpg"); 
 
     background-attachment: center;
     background-position: center center;
@@ -18,16 +21,19 @@
 
 .card-video{
     background: white;
-    width: 250px;
-    max-height: 390px;
-    border-radius: 2%;
-	-webkit-box-shadow: -1px 51px 82px -37px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 51px 82px -37px rgba(0,0,0,0.75);		
+    width: 240px;
+    height: 300px;
+    border-radius: 3%;
+}
+
+.card-video:hover{
+	-webkit-box-shadow: -1px 7px 97px 17px rgba(248, 248, 248, 0.75);
+    -moz-box-shadow: -1px 7px 97px 17px rgba(255, 255, 255, 0.75);
 
 }
 
 .front-video{
-    border-radius: 2%;
+    border-radius: 3%;
 }
 
 
